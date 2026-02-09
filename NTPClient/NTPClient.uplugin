@@ -1,0 +1,23 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "NTPClient",
+	"Description": "A basic network time protocol client blueprint library",
+	"Category": "Other",
+	"CreatedBy": "Iain Walker",
+	"CreatedByURL": "iainwalkergames.com",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"EngineVersion": "5.3.0",
+	"CanContainContent": false,
+	"Installed": true,
+	"Modules": [
+		{
+			"Name": "NTPClient",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	]
+}
