@@ -9,13 +9,14 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+struct FDateTime;
 #ifdef NTPCLIENT_NTPClientBPLibrary_generated_h
 #error "NTPClientBPLibrary.generated.h already included, missing '#pragma once' in NTPClientBPLibrary.h"
 #endif
 #define NTPCLIENT_NTPClientBPLibrary_generated_h
 
 #define FID_Users_Iain_Documents_UnrealPlugins_NTPClient_HostProject_Plugins_NTPClient_Source_NTPClient_Public_NTPClientBPLibrary_h_52_DELEGATE \
-NTPCLIENT_API void FDelegate_DelegateWrapper(const FScriptDelegate& Delegate, int32 ntpTimeYear, int32 ntpTimeMonth, int32 ntpTimeDay, int32 ntpTimeHrs, int32 ntpTimeMins, int32 ntpTimeSecs);
+NTPCLIENT_API void FDelegate_DelegateWrapper(const FScriptDelegate& Delegate, FDateTime ntpTime, int32 epochTimePoint, int32 dayOfWeek, int32 dayOfYear);
 
 
 #define FID_Users_Iain_Documents_UnrealPlugins_NTPClient_HostProject_Plugins_NTPClient_Source_NTPClient_Public_NTPClientBPLibrary_h_57_SPARSE_DATA
@@ -23,8 +24,8 @@ NTPCLIENT_API void FDelegate_DelegateWrapper(const FScriptDelegate& Delegate, in
 #define FID_Users_Iain_Documents_UnrealPlugins_NTPClient_HostProject_Plugins_NTPClient_Source_NTPClient_Public_NTPClientBPLibrary_h_57_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
 #define FID_Users_Iain_Documents_UnrealPlugins_NTPClient_HostProject_Plugins_NTPClient_Source_NTPClient_Public_NTPClientBPLibrary_h_57_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execGetMonotonicTime); \
-	DECLARE_FUNCTION(execGetGameUptime); \
+	DECLARE_FUNCTION(execConvertSecondsToDateTime); \
+	DECLARE_FUNCTION(execGetCurrentTimeSinceEpoch); \
 	DECLARE_FUNCTION(execGetNTPTime);
 
 

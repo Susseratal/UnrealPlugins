@@ -21,9 +21,8 @@ UNTPClientBPLibrary::UNTPClientBPLibrary(const FObjectInitializer& ObjectInitial
 // NOTE: pool.ntp.org
 void UNTPClientBPLibrary::GetNTPTime(FDelegate delegate) {
 	AsyncTask(ENamedThreads::AnyThread, [delegate]() {
-		int ntpHrs, ntpMins, ntpSecs, ntpYr, ntpMonth, ntpDay;
-		// int ntpMins = 0; 
-		// int ntpSecs = 0;
+		FDateTime ntpTime;
+		int epochTimePoint, dayOfWeek, dayOfYear;
 		int portNumber = 123;
 
 		/// Create and zero out all 48 bytes of the packet
@@ -81,43 +80,31 @@ void UNTPClientBPLibrary::GetNTPTime(FDelegate delegate) {
 		struct tm buf;
 		gmtime_s(&buf, &txTm);
 
-		ntpHrs = buf.tm_hour;
-		ntpMins = buf.tm_min;
-		ntpSecs = buf.tm_sec;
-		ntpYr = (buf.tm_year + 1900);
-		ntpMonth = (buf.tm_mon + 1);
-		ntpDay = buf.tm_mday;
+		dayOfWeek = buf.tm_wday;
+		dayOfYear = buf.tm_yday;
 
-		AsyncTask(ENamedThreads::GameThread, [delegate, ntpYr, ntpMonth, ntpDay, ntpHrs, ntpMins, ntpSecs]() {
-			delegate.ExecuteIfBound(ntpYr, ntpMonth, ntpDay, ntpHrs, ntpMins, ntpSecs);
+		ntpTime = FDateTime((buf.tm_year + 1900), (buf.tm_mon + 1), buf.tm_mday, buf.tm_hour, buf.tm_min, buf.tm_sec, 0);
+		GetCurrentTimeSinceEpoch(epochTimePoint);
+
+		AsyncTask(ENamedThreads::GameThread, [delegate, ntpTime, epochTimePoint, dayOfWeek, dayOfYear]() {
+			delegate.ExecuteIfBound(ntpTime, epochTimePoint, dayOfWeek, dayOfYear);
 		});
 	});
 }
 
-void UNTPClientBPLibrary::GetMonotonicTime(int& t) {
+void UNTPClientBPLibrary::GetCurrentTimeSinceEpoch(int& currentTimePoint) {
 	std::chrono::time_point sp = std::chrono::steady_clock::now(); 
 	auto sp_s = std::chrono::time_point_cast<std::chrono::seconds>(sp);
 	auto duration_s = sp_s.time_since_epoch();
-	t = duration_s.count();
+	currentTimePoint = duration_s.count();
 }
 
+void UNTPClientBPLibrary::ConvertSecondsToDateTime(int s, FDateTime& dateTime) {
+	time_t seconds = s;
+	struct tm buf; 
+	gmtime_s(&buf, &seconds);
 
-
-void UNTPClientBPLibrary::GetGameUptime(int startTime, int& h, int& m, int& s) {
-	std::chrono::time_point tp = std::chrono::steady_clock::now(); 
-	auto tp_s = std::chrono::time_point_cast<std::chrono::seconds>(tp); // cast NOW to seconds
-	auto duration_s = tp_s.time_since_epoch();
-	int currentTime = duration_s.count();
-
-	int runtime = currentTime - startTime;
-	int minutes = runtime / 60;
-	int seconds = runtime % 60;
-	int hours = minutes / 60;
-	minutes = minutes % 60;
-
-	h = int(hours);
-	m = int(minutes % 60);
-	s = int(runtime % 60);
+	dateTime = FDateTime((buf.tm_year - 69), (buf.tm_mon + 1), buf.tm_mday, buf.tm_hour, buf.tm_min, buf.tm_sec, 0);
 }
 
 void UNTPClientBPLibrary::Print(FColor colour, FString msg) {

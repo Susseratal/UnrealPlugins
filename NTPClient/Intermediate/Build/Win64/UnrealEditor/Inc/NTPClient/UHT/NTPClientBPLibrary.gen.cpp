@@ -9,6 +9,7 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeNTPClientBPLibrary() {}
 // Cross Module References
+	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FDateTime();
 	ENGINE_API UClass* Z_Construct_UClass_UBlueprintFunctionLibrary();
 	NTPCLIENT_API UClass* Z_Construct_UClass_UNTPClientBPLibrary();
 	NTPCLIENT_API UClass* Z_Construct_UClass_UNTPClientBPLibrary_NoRegister();
@@ -19,38 +20,30 @@ void EmptyLinkFunctionForGeneratedCodeNTPClientBPLibrary() {}
 	{
 		struct _Script_NTPClient_eventDelegate_Parms
 		{
-			int32 ntpTimeYear;
-			int32 ntpTimeMonth;
-			int32 ntpTimeDay;
-			int32 ntpTimeHrs;
-			int32 ntpTimeMins;
-			int32 ntpTimeSecs;
+			FDateTime ntpTime;
+			int32 epochTimePoint;
+			int32 dayOfWeek;
+			int32 dayOfYear;
 		};
-		static const UECodeGen_Private::FIntPropertyParams NewProp_ntpTimeYear;
-		static const UECodeGen_Private::FIntPropertyParams NewProp_ntpTimeMonth;
-		static const UECodeGen_Private::FIntPropertyParams NewProp_ntpTimeDay;
-		static const UECodeGen_Private::FIntPropertyParams NewProp_ntpTimeHrs;
-		static const UECodeGen_Private::FIntPropertyParams NewProp_ntpTimeMins;
-		static const UECodeGen_Private::FIntPropertyParams NewProp_ntpTimeSecs;
+		static const UECodeGen_Private::FStructPropertyParams NewProp_ntpTime;
+		static const UECodeGen_Private::FIntPropertyParams NewProp_epochTimePoint;
+		static const UECodeGen_Private::FIntPropertyParams NewProp_dayOfWeek;
+		static const UECodeGen_Private::FIntPropertyParams NewProp_dayOfYear;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
 #endif
 		static const UECodeGen_Private::FFunctionParams FuncParams;
 	};
-	const UECodeGen_Private::FIntPropertyParams Z_Construct_UDelegateFunction_NTPClient_Delegate__DelegateSignature_Statics::NewProp_ntpTimeYear = { "ntpTimeYear", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_NTPClient_eventDelegate_Parms, ntpTimeYear), METADATA_PARAMS(0, nullptr) };
-	const UECodeGen_Private::FIntPropertyParams Z_Construct_UDelegateFunction_NTPClient_Delegate__DelegateSignature_Statics::NewProp_ntpTimeMonth = { "ntpTimeMonth", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_NTPClient_eventDelegate_Parms, ntpTimeMonth), METADATA_PARAMS(0, nullptr) };
-	const UECodeGen_Private::FIntPropertyParams Z_Construct_UDelegateFunction_NTPClient_Delegate__DelegateSignature_Statics::NewProp_ntpTimeDay = { "ntpTimeDay", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_NTPClient_eventDelegate_Parms, ntpTimeDay), METADATA_PARAMS(0, nullptr) };
-	const UECodeGen_Private::FIntPropertyParams Z_Construct_UDelegateFunction_NTPClient_Delegate__DelegateSignature_Statics::NewProp_ntpTimeHrs = { "ntpTimeHrs", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_NTPClient_eventDelegate_Parms, ntpTimeHrs), METADATA_PARAMS(0, nullptr) };
-	const UECodeGen_Private::FIntPropertyParams Z_Construct_UDelegateFunction_NTPClient_Delegate__DelegateSignature_Statics::NewProp_ntpTimeMins = { "ntpTimeMins", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_NTPClient_eventDelegate_Parms, ntpTimeMins), METADATA_PARAMS(0, nullptr) };
-	const UECodeGen_Private::FIntPropertyParams Z_Construct_UDelegateFunction_NTPClient_Delegate__DelegateSignature_Statics::NewProp_ntpTimeSecs = { "ntpTimeSecs", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_NTPClient_eventDelegate_Parms, ntpTimeSecs), METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_NTPClient_Delegate__DelegateSignature_Statics::NewProp_ntpTime = { "ntpTime", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_NTPClient_eventDelegate_Parms, ntpTime), Z_Construct_UScriptStruct_FDateTime, METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FIntPropertyParams Z_Construct_UDelegateFunction_NTPClient_Delegate__DelegateSignature_Statics::NewProp_epochTimePoint = { "epochTimePoint", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_NTPClient_eventDelegate_Parms, epochTimePoint), METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FIntPropertyParams Z_Construct_UDelegateFunction_NTPClient_Delegate__DelegateSignature_Statics::NewProp_dayOfWeek = { "dayOfWeek", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_NTPClient_eventDelegate_Parms, dayOfWeek), METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FIntPropertyParams Z_Construct_UDelegateFunction_NTPClient_Delegate__DelegateSignature_Statics::NewProp_dayOfYear = { "dayOfYear", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_NTPClient_eventDelegate_Parms, dayOfYear), METADATA_PARAMS(0, nullptr) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UDelegateFunction_NTPClient_Delegate__DelegateSignature_Statics::PropPointers[] = {
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_NTPClient_Delegate__DelegateSignature_Statics::NewProp_ntpTimeYear,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_NTPClient_Delegate__DelegateSignature_Statics::NewProp_ntpTimeMonth,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_NTPClient_Delegate__DelegateSignature_Statics::NewProp_ntpTimeDay,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_NTPClient_Delegate__DelegateSignature_Statics::NewProp_ntpTimeHrs,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_NTPClient_Delegate__DelegateSignature_Statics::NewProp_ntpTimeMins,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_NTPClient_Delegate__DelegateSignature_Statics::NewProp_ntpTimeSecs,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_NTPClient_Delegate__DelegateSignature_Statics::NewProp_ntpTime,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_NTPClient_Delegate__DelegateSignature_Statics::NewProp_epochTimePoint,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_NTPClient_Delegate__DelegateSignature_Statics::NewProp_dayOfWeek,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_NTPClient_Delegate__DelegateSignature_Statics::NewProp_dayOfYear,
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UDelegateFunction_NTPClient_Delegate__DelegateSignature_Statics::Function_MetaDataParams[] = {
@@ -71,43 +64,37 @@ void EmptyLinkFunctionForGeneratedCodeNTPClientBPLibrary() {}
 		}
 		return ReturnFunction;
 	}
-void FDelegate_DelegateWrapper(const FScriptDelegate& Delegate, int32 ntpTimeYear, int32 ntpTimeMonth, int32 ntpTimeDay, int32 ntpTimeHrs, int32 ntpTimeMins, int32 ntpTimeSecs)
+void FDelegate_DelegateWrapper(const FScriptDelegate& Delegate, FDateTime ntpTime, int32 epochTimePoint, int32 dayOfWeek, int32 dayOfYear)
 {
 	struct _Script_NTPClient_eventDelegate_Parms
 	{
-		int32 ntpTimeYear;
-		int32 ntpTimeMonth;
-		int32 ntpTimeDay;
-		int32 ntpTimeHrs;
-		int32 ntpTimeMins;
-		int32 ntpTimeSecs;
+		FDateTime ntpTime;
+		int32 epochTimePoint;
+		int32 dayOfWeek;
+		int32 dayOfYear;
 	};
 	_Script_NTPClient_eventDelegate_Parms Parms;
-	Parms.ntpTimeYear=ntpTimeYear;
-	Parms.ntpTimeMonth=ntpTimeMonth;
-	Parms.ntpTimeDay=ntpTimeDay;
-	Parms.ntpTimeHrs=ntpTimeHrs;
-	Parms.ntpTimeMins=ntpTimeMins;
-	Parms.ntpTimeSecs=ntpTimeSecs;
+	Parms.ntpTime=ntpTime;
+	Parms.epochTimePoint=epochTimePoint;
+	Parms.dayOfWeek=dayOfWeek;
+	Parms.dayOfYear=dayOfYear;
 	Delegate.ProcessDelegate<UObject>(&Parms);
 }
-	DEFINE_FUNCTION(UNTPClientBPLibrary::execGetMonotonicTime)
+	DEFINE_FUNCTION(UNTPClientBPLibrary::execConvertSecondsToDateTime)
 	{
-		P_GET_PROPERTY_REF(FIntProperty,Z_Param_Out_t);
+		P_GET_PROPERTY(FIntProperty,Z_Param_s);
+		P_GET_STRUCT_REF(FDateTime,Z_Param_Out_dateTime);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		UNTPClientBPLibrary::GetMonotonicTime(Z_Param_Out_t);
+		UNTPClientBPLibrary::ConvertSecondsToDateTime(Z_Param_s,Z_Param_Out_dateTime);
 		P_NATIVE_END;
 	}
-	DEFINE_FUNCTION(UNTPClientBPLibrary::execGetGameUptime)
+	DEFINE_FUNCTION(UNTPClientBPLibrary::execGetCurrentTimeSinceEpoch)
 	{
-		P_GET_PROPERTY(FIntProperty,Z_Param_startTime);
-		P_GET_PROPERTY_REF(FIntProperty,Z_Param_Out_h);
-		P_GET_PROPERTY_REF(FIntProperty,Z_Param_Out_m);
-		P_GET_PROPERTY_REF(FIntProperty,Z_Param_Out_s);
+		P_GET_PROPERTY_REF(FIntProperty,Z_Param_Out_currentTimePoint);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		UNTPClientBPLibrary::GetGameUptime(Z_Param_startTime,Z_Param_Out_h,Z_Param_Out_m,Z_Param_Out_s);
+		UNTPClientBPLibrary::GetCurrentTimeSinceEpoch(Z_Param_Out_currentTimePoint);
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(UNTPClientBPLibrary::execGetNTPTime)
@@ -122,95 +109,87 @@ void FDelegate_DelegateWrapper(const FScriptDelegate& Delegate, int32 ntpTimeYea
 	{
 		UClass* Class = UNTPClientBPLibrary::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
-			{ "GetGameUptime", &UNTPClientBPLibrary::execGetGameUptime },
-			{ "GetMonotonicTime", &UNTPClientBPLibrary::execGetMonotonicTime },
+			{ "ConvertSecondsToDateTime", &UNTPClientBPLibrary::execConvertSecondsToDateTime },
+			{ "GetCurrentTimeSinceEpoch", &UNTPClientBPLibrary::execGetCurrentTimeSinceEpoch },
 			{ "GetNTPTime", &UNTPClientBPLibrary::execGetNTPTime },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
-	struct Z_Construct_UFunction_UNTPClientBPLibrary_GetGameUptime_Statics
+	struct Z_Construct_UFunction_UNTPClientBPLibrary_ConvertSecondsToDateTime_Statics
 	{
-		struct NTPClientBPLibrary_eventGetGameUptime_Parms
+		struct NTPClientBPLibrary_eventConvertSecondsToDateTime_Parms
 		{
-			int32 startTime;
-			int32 h;
-			int32 m;
 			int32 s;
+			FDateTime dateTime;
 		};
-		static const UECodeGen_Private::FIntPropertyParams NewProp_startTime;
-		static const UECodeGen_Private::FIntPropertyParams NewProp_h;
-		static const UECodeGen_Private::FIntPropertyParams NewProp_m;
 		static const UECodeGen_Private::FIntPropertyParams NewProp_s;
+		static const UECodeGen_Private::FStructPropertyParams NewProp_dateTime;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
 #endif
 		static const UECodeGen_Private::FFunctionParams FuncParams;
 	};
-	const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UNTPClientBPLibrary_GetGameUptime_Statics::NewProp_startTime = { "startTime", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(NTPClientBPLibrary_eventGetGameUptime_Parms, startTime), METADATA_PARAMS(0, nullptr) };
-	const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UNTPClientBPLibrary_GetGameUptime_Statics::NewProp_h = { "h", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(NTPClientBPLibrary_eventGetGameUptime_Parms, h), METADATA_PARAMS(0, nullptr) };
-	const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UNTPClientBPLibrary_GetGameUptime_Statics::NewProp_m = { "m", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(NTPClientBPLibrary_eventGetGameUptime_Parms, m), METADATA_PARAMS(0, nullptr) };
-	const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UNTPClientBPLibrary_GetGameUptime_Statics::NewProp_s = { "s", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(NTPClientBPLibrary_eventGetGameUptime_Parms, s), METADATA_PARAMS(0, nullptr) };
-	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UNTPClientBPLibrary_GetGameUptime_Statics::PropPointers[] = {
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UNTPClientBPLibrary_GetGameUptime_Statics::NewProp_startTime,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UNTPClientBPLibrary_GetGameUptime_Statics::NewProp_h,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UNTPClientBPLibrary_GetGameUptime_Statics::NewProp_m,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UNTPClientBPLibrary_GetGameUptime_Statics::NewProp_s,
+	const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UNTPClientBPLibrary_ConvertSecondsToDateTime_Statics::NewProp_s = { "s", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(NTPClientBPLibrary_eventConvertSecondsToDateTime_Parms, s), METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UNTPClientBPLibrary_ConvertSecondsToDateTime_Statics::NewProp_dateTime = { "dateTime", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(NTPClientBPLibrary_eventConvertSecondsToDateTime_Parms, dateTime), Z_Construct_UScriptStruct_FDateTime, METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UNTPClientBPLibrary_ConvertSecondsToDateTime_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UNTPClientBPLibrary_ConvertSecondsToDateTime_Statics::NewProp_s,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UNTPClientBPLibrary_ConvertSecondsToDateTime_Statics::NewProp_dateTime,
 	};
 #if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UNTPClientBPLibrary_GetGameUptime_Statics::Function_MetaDataParams[] = {
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UNTPClientBPLibrary_ConvertSecondsToDateTime_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Monotonic Time" },
-		{ "Comment", "/**\n\x09* Get in hrs, minutes and seconds, the duration of time the game has been running synchronised to monotonic time\n\x09* \n\x09* @param h The number of hours since the game started running\n\x09* @param m The number of minutes since the game started running\n\x09* @param s The number of seconds since the game started running\n\x09*/" },
-		{ "DisplayName", "Get Game Uptime" },
+		{ "Comment", "/*\n\x09* What would the date and time be \"s\" seconds after 1st Jan the year Jesus was born\n\x09*/" },
+		{ "DisplayName", "Convert seconds to a date time" },
 		{ "ModuleRelativePath", "Public/NTPClientBPLibrary.h" },
-		{ "ToolTip", "Get in hrs, minutes and seconds, the duration of time the game has been running synchronised to monotonic time\n\n@param h The number of hours since the game started running\n@param m The number of minutes since the game started running\n@param s The number of seconds since the game started running" },
+		{ "ToolTip", "* What would the date and time be \"s\" seconds after 1st Jan the year Jesus was born" },
 	};
 #endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UNTPClientBPLibrary_GetGameUptime_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UNTPClientBPLibrary, nullptr, "GetGameUptime", nullptr, nullptr, Z_Construct_UFunction_UNTPClientBPLibrary_GetGameUptime_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UNTPClientBPLibrary_GetGameUptime_Statics::PropPointers), sizeof(Z_Construct_UFunction_UNTPClientBPLibrary_GetGameUptime_Statics::NTPClientBPLibrary_eventGetGameUptime_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14422401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UNTPClientBPLibrary_GetGameUptime_Statics::Function_MetaDataParams), Z_Construct_UFunction_UNTPClientBPLibrary_GetGameUptime_Statics::Function_MetaDataParams) };
-	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UNTPClientBPLibrary_GetGameUptime_Statics::PropPointers) < 2048);
-	static_assert(sizeof(Z_Construct_UFunction_UNTPClientBPLibrary_GetGameUptime_Statics::NTPClientBPLibrary_eventGetGameUptime_Parms) < MAX_uint16);
-	UFunction* Z_Construct_UFunction_UNTPClientBPLibrary_GetGameUptime()
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UNTPClientBPLibrary_ConvertSecondsToDateTime_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UNTPClientBPLibrary, nullptr, "ConvertSecondsToDateTime", nullptr, nullptr, Z_Construct_UFunction_UNTPClientBPLibrary_ConvertSecondsToDateTime_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UNTPClientBPLibrary_ConvertSecondsToDateTime_Statics::PropPointers), sizeof(Z_Construct_UFunction_UNTPClientBPLibrary_ConvertSecondsToDateTime_Statics::NTPClientBPLibrary_eventConvertSecondsToDateTime_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14C22401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UNTPClientBPLibrary_ConvertSecondsToDateTime_Statics::Function_MetaDataParams), Z_Construct_UFunction_UNTPClientBPLibrary_ConvertSecondsToDateTime_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UNTPClientBPLibrary_ConvertSecondsToDateTime_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_UNTPClientBPLibrary_ConvertSecondsToDateTime_Statics::NTPClientBPLibrary_eventConvertSecondsToDateTime_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_UNTPClientBPLibrary_ConvertSecondsToDateTime()
 	{
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
-			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UNTPClientBPLibrary_GetGameUptime_Statics::FuncParams);
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UNTPClientBPLibrary_ConvertSecondsToDateTime_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
-	struct Z_Construct_UFunction_UNTPClientBPLibrary_GetMonotonicTime_Statics
+	struct Z_Construct_UFunction_UNTPClientBPLibrary_GetCurrentTimeSinceEpoch_Statics
 	{
-		struct NTPClientBPLibrary_eventGetMonotonicTime_Parms
+		struct NTPClientBPLibrary_eventGetCurrentTimeSinceEpoch_Parms
 		{
-			int32 t;
+			int32 currentTimePoint;
 		};
-		static const UECodeGen_Private::FIntPropertyParams NewProp_t;
+		static const UECodeGen_Private::FIntPropertyParams NewProp_currentTimePoint;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
 #endif
 		static const UECodeGen_Private::FFunctionParams FuncParams;
 	};
-	const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UNTPClientBPLibrary_GetMonotonicTime_Statics::NewProp_t = { "t", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(NTPClientBPLibrary_eventGetMonotonicTime_Parms, t), METADATA_PARAMS(0, nullptr) };
-	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UNTPClientBPLibrary_GetMonotonicTime_Statics::PropPointers[] = {
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UNTPClientBPLibrary_GetMonotonicTime_Statics::NewProp_t,
+	const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UNTPClientBPLibrary_GetCurrentTimeSinceEpoch_Statics::NewProp_currentTimePoint = { "currentTimePoint", nullptr, (EPropertyFlags)0x0010000000000180, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(NTPClientBPLibrary_eventGetCurrentTimeSinceEpoch_Parms, currentTimePoint), METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UNTPClientBPLibrary_GetCurrentTimeSinceEpoch_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UNTPClientBPLibrary_GetCurrentTimeSinceEpoch_Statics::NewProp_currentTimePoint,
 	};
 #if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UNTPClientBPLibrary_GetMonotonicTime_Statics::Function_MetaDataParams[] = {
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UNTPClientBPLibrary_GetCurrentTimeSinceEpoch_Statics::Function_MetaDataParams[] = {
 		{ "Category", "Monotonic Time" },
-		{ "DisplayName", "Get Monotonic Time" },
+		{ "DisplayName", "Get Current time Since Epoch" },
 		{ "ModuleRelativePath", "Public/NTPClientBPLibrary.h" },
 	};
 #endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UNTPClientBPLibrary_GetMonotonicTime_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UNTPClientBPLibrary, nullptr, "GetMonotonicTime", nullptr, nullptr, Z_Construct_UFunction_UNTPClientBPLibrary_GetMonotonicTime_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UNTPClientBPLibrary_GetMonotonicTime_Statics::PropPointers), sizeof(Z_Construct_UFunction_UNTPClientBPLibrary_GetMonotonicTime_Statics::NTPClientBPLibrary_eventGetMonotonicTime_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14422401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UNTPClientBPLibrary_GetMonotonicTime_Statics::Function_MetaDataParams), Z_Construct_UFunction_UNTPClientBPLibrary_GetMonotonicTime_Statics::Function_MetaDataParams) };
-	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UNTPClientBPLibrary_GetMonotonicTime_Statics::PropPointers) < 2048);
-	static_assert(sizeof(Z_Construct_UFunction_UNTPClientBPLibrary_GetMonotonicTime_Statics::NTPClientBPLibrary_eventGetMonotonicTime_Parms) < MAX_uint16);
-	UFunction* Z_Construct_UFunction_UNTPClientBPLibrary_GetMonotonicTime()
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UNTPClientBPLibrary_GetCurrentTimeSinceEpoch_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UNTPClientBPLibrary, nullptr, "GetCurrentTimeSinceEpoch", nullptr, nullptr, Z_Construct_UFunction_UNTPClientBPLibrary_GetCurrentTimeSinceEpoch_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UNTPClientBPLibrary_GetCurrentTimeSinceEpoch_Statics::PropPointers), sizeof(Z_Construct_UFunction_UNTPClientBPLibrary_GetCurrentTimeSinceEpoch_Statics::NTPClientBPLibrary_eventGetCurrentTimeSinceEpoch_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14422401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UNTPClientBPLibrary_GetCurrentTimeSinceEpoch_Statics::Function_MetaDataParams), Z_Construct_UFunction_UNTPClientBPLibrary_GetCurrentTimeSinceEpoch_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UNTPClientBPLibrary_GetCurrentTimeSinceEpoch_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_UNTPClientBPLibrary_GetCurrentTimeSinceEpoch_Statics::NTPClientBPLibrary_eventGetCurrentTimeSinceEpoch_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_UNTPClientBPLibrary_GetCurrentTimeSinceEpoch()
 	{
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
-			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UNTPClientBPLibrary_GetMonotonicTime_Statics::FuncParams);
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UNTPClientBPLibrary_GetCurrentTimeSinceEpoch_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -227,7 +206,7 @@ void FDelegate_DelegateWrapper(const FScriptDelegate& Delegate, int32 ntpTimeYea
 #endif
 		static const UECodeGen_Private::FFunctionParams FuncParams;
 	};
-	const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UNTPClientBPLibrary_GetNTPTime_Statics::NewProp_delegate = { "delegate", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(NTPClientBPLibrary_eventGetNTPTime_Parms, delegate), Z_Construct_UDelegateFunction_NTPClient_Delegate__DelegateSignature, METADATA_PARAMS(0, nullptr) }; // 3357909431
+	const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UNTPClientBPLibrary_GetNTPTime_Statics::NewProp_delegate = { "delegate", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(NTPClientBPLibrary_eventGetNTPTime_Parms, delegate), Z_Construct_UDelegateFunction_NTPClient_Delegate__DelegateSignature, METADATA_PARAMS(0, nullptr) }; // 1060226326
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UNTPClientBPLibrary_GetNTPTime_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UNTPClientBPLibrary_GetNTPTime_Statics::NewProp_delegate,
 	};
@@ -271,9 +250,9 @@ void FDelegate_DelegateWrapper(const FScriptDelegate& Delegate, int32 ntpTimeYea
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UNTPClientBPLibrary_Statics::DependentSingletons) < 16);
 	const FClassFunctionLinkInfo Z_Construct_UClass_UNTPClientBPLibrary_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_UNTPClientBPLibrary_GetGameUptime, "GetGameUptime" }, // 3541858250
-		{ &Z_Construct_UFunction_UNTPClientBPLibrary_GetMonotonicTime, "GetMonotonicTime" }, // 2850665592
-		{ &Z_Construct_UFunction_UNTPClientBPLibrary_GetNTPTime, "GetNTPTime" }, // 1329429069
+		{ &Z_Construct_UFunction_UNTPClientBPLibrary_ConvertSecondsToDateTime, "ConvertSecondsToDateTime" }, // 480749315
+		{ &Z_Construct_UFunction_UNTPClientBPLibrary_GetCurrentTimeSinceEpoch, "GetCurrentTimeSinceEpoch" }, // 2290924793
+		{ &Z_Construct_UFunction_UNTPClientBPLibrary_GetNTPTime, "GetNTPTime" }, // 1580817803
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UNTPClientBPLibrary_Statics::FuncInfo) < 2048);
 #if WITH_METADATA
@@ -320,9 +299,9 @@ void FDelegate_DelegateWrapper(const FScriptDelegate& Delegate, int32 ntpTimeYea
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Iain_Documents_UnrealPlugins_NTPClient_HostProject_Plugins_NTPClient_Source_NTPClient_Public_NTPClientBPLibrary_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UNTPClientBPLibrary, UNTPClientBPLibrary::StaticClass, TEXT("UNTPClientBPLibrary"), &Z_Registration_Info_UClass_UNTPClientBPLibrary, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UNTPClientBPLibrary), 1243141203U) },
+		{ Z_Construct_UClass_UNTPClientBPLibrary, UNTPClientBPLibrary::StaticClass, TEXT("UNTPClientBPLibrary"), &Z_Registration_Info_UClass_UNTPClientBPLibrary, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UNTPClientBPLibrary), 1762488812U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Iain_Documents_UnrealPlugins_NTPClient_HostProject_Plugins_NTPClient_Source_NTPClient_Public_NTPClientBPLibrary_h_1616835675(TEXT("/Script/NTPClient"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Iain_Documents_UnrealPlugins_NTPClient_HostProject_Plugins_NTPClient_Source_NTPClient_Public_NTPClientBPLibrary_h_1027628226(TEXT("/Script/NTPClient"),
 		Z_CompiledInDeferFile_FID_Users_Iain_Documents_UnrealPlugins_NTPClient_HostProject_Plugins_NTPClient_Source_NTPClient_Public_NTPClientBPLibrary_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Iain_Documents_UnrealPlugins_NTPClient_HostProject_Plugins_NTPClient_Source_NTPClient_Public_NTPClientBPLibrary_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

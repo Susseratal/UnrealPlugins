@@ -49,7 +49,7 @@ typedef struct {
 	uint32_t txTm_f;			// thirty two bits. transmit time-stamp fraction of a second
 } ntp_packet; // total of 384 bits or 48 bytes
 
-DECLARE_DYNAMIC_DELEGATE_SixParams(FDelegate, int, ntpTimeYear, int, ntpTimeMonth, int, ntpTimeDay, int, ntpTimeHrs, int, ntpTimeMins, int, ntpTimeSecs);
+DECLARE_DYNAMIC_DELEGATE_FourParams(FDelegate, FDateTime, ntpTime, int, epochTimePoint, int, dayOfWeek, int, dayOfYear);
 
 UCLASS()
 class UNTPClientBPLibrary : public UBlueprintFunctionLibrary
@@ -60,18 +60,14 @@ public:
 	UFUNCTION(BlueprintCallable, meta = (DisplayName = "Get NTP time", Category="NTP"))
 	static void GetNTPTime(FDelegate delegate);
 
-	/**
-	* Get in hrs, minutes and seconds, the duration of time the game has been running synchronised to monotonic time
-	* 
-	* @param h The number of hours since the game started running
-	* @param m The number of minutes since the game started running
-	* @param s The number of seconds since the game started running
-	*/
-	UFUNCTION(BlueprintPure, meta = (DisplayName = "Get Game Uptime", Category="Monotonic Time"))
-	static void GetGameUptime(int startTime, int& h, int& m, int& s);
+	UFUNCTION(BlueprintPure, meta = (DisplayName = "Get Current time Since Epoch", Category="Monotonic Time"))
+	static void GetCurrentTimeSinceEpoch(int& currentTimePoint);
 
-	UFUNCTION(BlueprintPure, meta = (DisplayName = "Get Monotonic Time", Category="Monotonic Time"))
-	static void GetMonotonicTime(int& t);
+	/*
+	* What would the date and time be "s" seconds after 1st Jan the year Jesus was born
+	*/
+	UFUNCTION(BlueprintPure, meta = (DisplayName = "Convert seconds to a date time", Category="Monotonic Time"))
+	static void ConvertSecondsToDateTime(int s, FDateTime& dateTime);
 
 
 private:
