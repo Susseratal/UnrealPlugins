@@ -49,8 +49,7 @@ typedef struct {
 	uint32_t txTm_f;			// thirty two bits. transmit time-stamp fraction of a second
 } ntp_packet; // total of 384 bits or 48 bytes
 
-// DECLARE_DYNAMIC_DELEGATE_OneParam(FDelegate, int, startTime);
-DECLARE_DYNAMIC_DELEGATE_ThreeParams(FDelegate, int, ntpTimeHrs, int, ntpTimeMins, int, ntpTimeSecs);
+DECLARE_DYNAMIC_DELEGATE_SixParams(FDelegate, int, ntpTimeYear, int, ntpTimeMonth, int, ntpTimeDay, int, ntpTimeHrs, int, ntpTimeMins, int, ntpTimeSecs);
 
 UCLASS()
 class UNTPClientBPLibrary : public UBlueprintFunctionLibrary

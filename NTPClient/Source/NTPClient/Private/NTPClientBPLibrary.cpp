@@ -21,9 +21,9 @@ UNTPClientBPLibrary::UNTPClientBPLibrary(const FObjectInitializer& ObjectInitial
 // NOTE: pool.ntp.org
 void UNTPClientBPLibrary::GetNTPTime(FDelegate delegate) {
 	AsyncTask(ENamedThreads::AnyThread, [delegate]() {
-		int ntpHrs = 0;
-		int ntpMins = 0; 
-		int ntpSecs = 0;
+		int ntpHrs, ntpMins, ntpSecs, ntpYr, ntpMonth, ntpDay;
+		// int ntpMins = 0; 
+		// int ntpSecs = 0;
 		int portNumber = 123;
 
 		/// Create and zero out all 48 bytes of the packet
@@ -84,14 +84,12 @@ void UNTPClientBPLibrary::GetNTPTime(FDelegate delegate) {
 		ntpHrs = buf.tm_hour;
 		ntpMins = buf.tm_min;
 		ntpSecs = buf.tm_sec;
+		ntpYr = (buf.tm_year + 1900);
+		ntpMonth = (buf.tm_mon + 1);
+		ntpDay = buf.tm_mday;
 
-		// ntpMins = txTm / 60;
-		// ntpSecs = txTm % 60;
-		// ntpHrs = ntpMins / 60; // hrs since 1970
-		// ntpMins = ntpMins % 60;
-
-		AsyncTask(ENamedThreads::GameThread, [delegate, ntpHrs, ntpMins, ntpSecs]() {
-			delegate.ExecuteIfBound(ntpHrs, ntpMins, ntpSecs);
+		AsyncTask(ENamedThreads::GameThread, [delegate, ntpYr, ntpMonth, ntpDay, ntpHrs, ntpMins, ntpSecs]() {
+			delegate.ExecuteIfBound(ntpYr, ntpMonth, ntpDay, ntpHrs, ntpMins, ntpSecs);
 		});
 	});
 }

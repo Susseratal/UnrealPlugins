@@ -19,10 +19,16 @@ void EmptyLinkFunctionForGeneratedCodeNTPClientBPLibrary() {}
 	{
 		struct _Script_NTPClient_eventDelegate_Parms
 		{
+			int32 ntpTimeYear;
+			int32 ntpTimeMonth;
+			int32 ntpTimeDay;
 			int32 ntpTimeHrs;
 			int32 ntpTimeMins;
 			int32 ntpTimeSecs;
 		};
+		static const UECodeGen_Private::FIntPropertyParams NewProp_ntpTimeYear;
+		static const UECodeGen_Private::FIntPropertyParams NewProp_ntpTimeMonth;
+		static const UECodeGen_Private::FIntPropertyParams NewProp_ntpTimeDay;
 		static const UECodeGen_Private::FIntPropertyParams NewProp_ntpTimeHrs;
 		static const UECodeGen_Private::FIntPropertyParams NewProp_ntpTimeMins;
 		static const UECodeGen_Private::FIntPropertyParams NewProp_ntpTimeSecs;
@@ -32,19 +38,25 @@ void EmptyLinkFunctionForGeneratedCodeNTPClientBPLibrary() {}
 #endif
 		static const UECodeGen_Private::FFunctionParams FuncParams;
 	};
+	const UECodeGen_Private::FIntPropertyParams Z_Construct_UDelegateFunction_NTPClient_Delegate__DelegateSignature_Statics::NewProp_ntpTimeYear = { "ntpTimeYear", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_NTPClient_eventDelegate_Parms, ntpTimeYear), METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FIntPropertyParams Z_Construct_UDelegateFunction_NTPClient_Delegate__DelegateSignature_Statics::NewProp_ntpTimeMonth = { "ntpTimeMonth", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_NTPClient_eventDelegate_Parms, ntpTimeMonth), METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FIntPropertyParams Z_Construct_UDelegateFunction_NTPClient_Delegate__DelegateSignature_Statics::NewProp_ntpTimeDay = { "ntpTimeDay", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_NTPClient_eventDelegate_Parms, ntpTimeDay), METADATA_PARAMS(0, nullptr) };
 	const UECodeGen_Private::FIntPropertyParams Z_Construct_UDelegateFunction_NTPClient_Delegate__DelegateSignature_Statics::NewProp_ntpTimeHrs = { "ntpTimeHrs", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_NTPClient_eventDelegate_Parms, ntpTimeHrs), METADATA_PARAMS(0, nullptr) };
 	const UECodeGen_Private::FIntPropertyParams Z_Construct_UDelegateFunction_NTPClient_Delegate__DelegateSignature_Statics::NewProp_ntpTimeMins = { "ntpTimeMins", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_NTPClient_eventDelegate_Parms, ntpTimeMins), METADATA_PARAMS(0, nullptr) };
 	const UECodeGen_Private::FIntPropertyParams Z_Construct_UDelegateFunction_NTPClient_Delegate__DelegateSignature_Statics::NewProp_ntpTimeSecs = { "ntpTimeSecs", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_NTPClient_eventDelegate_Parms, ntpTimeSecs), METADATA_PARAMS(0, nullptr) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UDelegateFunction_NTPClient_Delegate__DelegateSignature_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_NTPClient_Delegate__DelegateSignature_Statics::NewProp_ntpTimeYear,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_NTPClient_Delegate__DelegateSignature_Statics::NewProp_ntpTimeMonth,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_NTPClient_Delegate__DelegateSignature_Statics::NewProp_ntpTimeDay,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_NTPClient_Delegate__DelegateSignature_Statics::NewProp_ntpTimeHrs,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_NTPClient_Delegate__DelegateSignature_Statics::NewProp_ntpTimeMins,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_NTPClient_Delegate__DelegateSignature_Statics::NewProp_ntpTimeSecs,
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UDelegateFunction_NTPClient_Delegate__DelegateSignature_Statics::Function_MetaDataParams[] = {
-		{ "Comment", "// DECLARE_DYNAMIC_DELEGATE_OneParam(FDelegate, int, startTime);\n" },
+		{ "Comment", "// total of 384 bits or 48 bytes\n" },
 		{ "ModuleRelativePath", "Public/NTPClientBPLibrary.h" },
-		{ "ToolTip", "DECLARE_DYNAMIC_DELEGATE_OneParam(FDelegate, int, startTime);" },
+		{ "ToolTip", "total of 384 bits or 48 bytes" },
 	};
 #endif
 	const UECodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_NTPClient_Delegate__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UPackage__Script_NTPClient, nullptr, "Delegate__DelegateSignature", nullptr, nullptr, Z_Construct_UDelegateFunction_NTPClient_Delegate__DelegateSignature_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_NTPClient_Delegate__DelegateSignature_Statics::PropPointers), sizeof(Z_Construct_UDelegateFunction_NTPClient_Delegate__DelegateSignature_Statics::_Script_NTPClient_eventDelegate_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00120000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_NTPClient_Delegate__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_NTPClient_Delegate__DelegateSignature_Statics::Function_MetaDataParams) };
@@ -59,15 +71,21 @@ void EmptyLinkFunctionForGeneratedCodeNTPClientBPLibrary() {}
 		}
 		return ReturnFunction;
 	}
-void FDelegate_DelegateWrapper(const FScriptDelegate& Delegate, int32 ntpTimeHrs, int32 ntpTimeMins, int32 ntpTimeSecs)
+void FDelegate_DelegateWrapper(const FScriptDelegate& Delegate, int32 ntpTimeYear, int32 ntpTimeMonth, int32 ntpTimeDay, int32 ntpTimeHrs, int32 ntpTimeMins, int32 ntpTimeSecs)
 {
 	struct _Script_NTPClient_eventDelegate_Parms
 	{
+		int32 ntpTimeYear;
+		int32 ntpTimeMonth;
+		int32 ntpTimeDay;
 		int32 ntpTimeHrs;
 		int32 ntpTimeMins;
 		int32 ntpTimeSecs;
 	};
 	_Script_NTPClient_eventDelegate_Parms Parms;
+	Parms.ntpTimeYear=ntpTimeYear;
+	Parms.ntpTimeMonth=ntpTimeMonth;
+	Parms.ntpTimeDay=ntpTimeDay;
 	Parms.ntpTimeHrs=ntpTimeHrs;
 	Parms.ntpTimeMins=ntpTimeMins;
 	Parms.ntpTimeSecs=ntpTimeSecs;
@@ -209,7 +227,7 @@ void FDelegate_DelegateWrapper(const FScriptDelegate& Delegate, int32 ntpTimeHrs
 #endif
 		static const UECodeGen_Private::FFunctionParams FuncParams;
 	};
-	const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UNTPClientBPLibrary_GetNTPTime_Statics::NewProp_delegate = { "delegate", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(NTPClientBPLibrary_eventGetNTPTime_Parms, delegate), Z_Construct_UDelegateFunction_NTPClient_Delegate__DelegateSignature, METADATA_PARAMS(0, nullptr) }; // 458946638
+	const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UNTPClientBPLibrary_GetNTPTime_Statics::NewProp_delegate = { "delegate", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(NTPClientBPLibrary_eventGetNTPTime_Parms, delegate), Z_Construct_UDelegateFunction_NTPClient_Delegate__DelegateSignature, METADATA_PARAMS(0, nullptr) }; // 3357909431
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UNTPClientBPLibrary_GetNTPTime_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UNTPClientBPLibrary_GetNTPTime_Statics::NewProp_delegate,
 	};
@@ -255,7 +273,7 @@ void FDelegate_DelegateWrapper(const FScriptDelegate& Delegate, int32 ntpTimeHrs
 	const FClassFunctionLinkInfo Z_Construct_UClass_UNTPClientBPLibrary_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_UNTPClientBPLibrary_GetGameUptime, "GetGameUptime" }, // 3541858250
 		{ &Z_Construct_UFunction_UNTPClientBPLibrary_GetMonotonicTime, "GetMonotonicTime" }, // 2850665592
-		{ &Z_Construct_UFunction_UNTPClientBPLibrary_GetNTPTime, "GetNTPTime" }, // 909949559
+		{ &Z_Construct_UFunction_UNTPClientBPLibrary_GetNTPTime, "GetNTPTime" }, // 1329429069
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UNTPClientBPLibrary_Statics::FuncInfo) < 2048);
 #if WITH_METADATA
@@ -302,9 +320,9 @@ void FDelegate_DelegateWrapper(const FScriptDelegate& Delegate, int32 ntpTimeHrs
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Iain_Documents_UnrealPlugins_NTPClient_HostProject_Plugins_NTPClient_Source_NTPClient_Public_NTPClientBPLibrary_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UNTPClientBPLibrary, UNTPClientBPLibrary::StaticClass, TEXT("UNTPClientBPLibrary"), &Z_Registration_Info_UClass_UNTPClientBPLibrary, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UNTPClientBPLibrary), 2976294296U) },
+		{ Z_Construct_UClass_UNTPClientBPLibrary, UNTPClientBPLibrary::StaticClass, TEXT("UNTPClientBPLibrary"), &Z_Registration_Info_UClass_UNTPClientBPLibrary, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UNTPClientBPLibrary), 1243141203U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Iain_Documents_UnrealPlugins_NTPClient_HostProject_Plugins_NTPClient_Source_NTPClient_Public_NTPClientBPLibrary_h_1525844299(TEXT("/Script/NTPClient"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Iain_Documents_UnrealPlugins_NTPClient_HostProject_Plugins_NTPClient_Source_NTPClient_Public_NTPClientBPLibrary_h_1616835675(TEXT("/Script/NTPClient"),
 		Z_CompiledInDeferFile_FID_Users_Iain_Documents_UnrealPlugins_NTPClient_HostProject_Plugins_NTPClient_Source_NTPClient_Public_NTPClientBPLibrary_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Iain_Documents_UnrealPlugins_NTPClient_HostProject_Plugins_NTPClient_Source_NTPClient_Public_NTPClientBPLibrary_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
