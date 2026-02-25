@@ -1,0 +1,7 @@
+{
+	"OutputFiles": [
+		"..\\..\\..\\x64\\UnrealGame\\Shipping\\NTPClient\\Module.NTPClient.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Shipping\\NTPClient\\NTPClient.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Shipping\\NTPClient\\NTPClientBPLibrary.cpp.obj"
+	]
+}
